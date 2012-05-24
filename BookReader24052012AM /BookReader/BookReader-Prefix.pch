@@ -1,0 +1,67 @@
+//
+// Prefix header for all source files of the 'BookReader' target in the 'BookReader' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+
+#ifdef DEBUGGING
+
+#define DBLog(fmt,...) NSLog(@"%@",[NSString stringWithFormatfmt), ##__VA_ARGS__]);
+
+#else
+
+#define DBLog(...)
+
+#endif
+
+
+#define BOOK_HEIGHT                         129
+#define BOOK_WIDTH                          105
+
+#define BOOK_PADDING_TOP_PORTRAIT           38
+#define BOOK_PADDING_LEFT_PORTRAIT          36
+#define BOOK_DISTANCE_PORTRAIT              43
+
+#define BOOK_PADDING_TOP_LANDSCAPE          38
+#define BOOK_PADDING_LEFT_LANDSCAPE         36
+#define BOOK_DISTANCE_LANDSCAPE             64
+
+#define NUM_BOOK_PORTRAIT                   5
+#define NUM_BOOK_LANDSCAPE                  6
+
+#define NUM_EXTRA_SHELF                     5
+
+#define HEIGHT_SHELF                        192
+
+#define WEBVIEW_HEIGHT_LANDSCAPE            704
+#define WEBVIEW_HEIGHT_PORTRAIT             960
+#define WEBVIEW_WIDTH_LANDSCAPE             1024
+#define WEBVIEW_WIDTH_PORTRAIT              768
+
+#define URL_GET_LIST_BOOKS_OF_CATEGORY      @"http://bookstore.vncool.net/index.php?option=com_abook&format=raw&view=category&id="
+#define URL_GET_BOOK_INFO                   @"http://bookstore.vncool.net/index.php?option=com_abook&format=raw&view=book&id="
+
+#define DIRECTORY_STORE_EBOOK               @"BRStore"
+
+#define USERNAME                            @"quandm"
+#define PASSWORD                            @"xTQLrAIyBlN"
+
+#define FB_APP_ID                           @"349546251775987"
+#define FB_APP_SECRET                       @"f8f32b0c911ad8517dd87ad9323ff572"
+
+#define URL_SEND_LOGIN_USER_ID              @"http://bookstore.vncool.net/index.php?option=com_users&view=registration&format=raw"
+#define URL_SEND_ID_DOWNLOADED_BOOK_AND_USER_ID        @"http://bookstore.vncool.net/index.php?option=com_abook&view=download&format=raw"
+#define URL_GET_LIST_DOWNLOADED_BOOK        @"http://bookstore.vncool.net/index.php?option=com_abook&view=download&format=raw&account_id="
+#define URL_SEARCH_BOOK                     @"http://bookstore.vncool.net/index.php?option=com_abook&format=raw&view=search&key="
+
+#define REQUEST_TIME_OUT                    20
